@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Report Jadwal" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b3298c20-8c5c-4d13-aad5-4a3ad7e9acdf">
+	<property name="ireport.zoom" value="1.0000000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT mapel.id, mapel.hari, mapel.jam_mapel, mapel.jumlah_jam, mapel.kelas, mapel.jurusan, mapel.tahun_ajaran, honor.bidang_studi, honor.honor FROM mapel INNER JOIN honor ON mapel.id_honor = honor.id ORDER BY id ASC]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hari" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jam_mapel" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jumlah_jam" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kelas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jurusan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tahun_ajaran" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bidang_studi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="honor" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="123" splitType="Stretch">
+			<staticText>
+				<reportElement x="245" y="42" width="377" height="50" uuid="18824ab8-10d4-4668-b3e4-48c17d818ed6"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Jl. Ujung Selatan Perumahan Wisma Cakra, Rt 004 Rw 009 Kelurahan-Kecamatan Limo Kota Depok 16515 - Jawa Barat. Admin : 0821 2227 1300 Email : smkcakranusantara@gmail.com]]></text>
+			</staticText>
+			<image>
+				<reportElement x="48" y="2" width="100" height="100" uuid="12169695-cc76-4400-874a-b2fdb564d0dd"/>
+				<imageExpression><![CDATA["C:\\Users\\Administrator\\Documents\\NetBeansProjects\\PenggajianSkripsi\\src\\Images\\logoTiny.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="301" y="11" width="268" height="24" uuid="1462669b-ead2-472c-b1ba-a0db635b3b0e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SMK CAKRA NUSANTARA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-19" y="120" width="841" height="1" uuid="1a10afc4-5986-4541-975b-6af1fd2d7ff7"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineColor="#D9D9D9"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="82" splitType="Stretch">
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="37" y="42" width="128" height="20" uuid="29e2a196-d927-4c67-88d5-e029334e4bfc"/>
+				<textElement>
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="42" width="35" height="20" uuid="c6b8c28f-0488-4cfc-b24a-f1cd46e76bf9"/>
+				<textElement>
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<text><![CDATA[Depok,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="20" width="264" height="20" uuid="7b3b6fdd-0680-443e-bcdf-bdafd889b18a"/>
+				<textElement textAlignment="Left">
+					<font fontName="Segoe UI" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN JADWAL MATA PELAJARAN]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="54" height="20" uuid="1e68cfb8-955d-42e2-9cd4-4656fba63d02"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Segoe UI" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="1" width="57" height="20" uuid="cff15d4d-d0b5-4518-9fc4-a0483f3bc8f3"/>
+				<textElement>
+					<font fontName="Segoe UI" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="113" y="1" width="100" height="20" uuid="b0a42586-0cf5-4bc6-b475-8f49260f8829"/>
+				<textElement>
+					<font fontName="Segoe UI" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATA PELAJARAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="1" width="58" height="20" uuid="23aec2b9-e9a8-4b13-bc91-96a8302ad8d1"/>
+				<textElement>
+					<font fontName="Segoe UI" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="293" y="1" width="69" height="20" uuid="1979bc78-515b-4df9-962f-f7c4d1567db4"/>
+				<textElement>
+					<font fontName="Segoe UI" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JAM MAPEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="1" width="76" height="20" uuid="295f8e4c-6457-4de6-b2eb-c40ef4f6ef93"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUMLAH JAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="1" width="77" height="20" uuid="a654e5bf-b0d6-4c9f-a7d9-39154581865f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HONOR / JAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="1" width="66" height="20" uuid="15e925af-e172-4d13-a056-de4cd39601c7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KELAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="593" y="1" width="113" height="20" uuid="31fcc506-0eec-4df2-bf00-489333625b4e"/>
+				<textElement>
+					<font fontName="Segoe UI" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JURUSAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="706" y="1" width="96" height="20" uuid="30bd982f-1568-4eff-b08b-c8c74e71a1fd"/>
+				<textElement>
+					<font fontName="Segoe UI" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TAHUN AJARAN]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="1" width="54" height="20" uuid="68426b61-bbd9-4d41-aafa-997cc07a263e"/>
+				<textElement>
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="56" y="1" width="57" height="20" uuid="8ae800df-e2ce-42da-813d-0f4692f515f2"/>
+				<textElement>
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="1" width="100" height="20" uuid="869f66bc-9867-450c-a2c1-a8699129ae8f"/>
+				<textElement>
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bidang_studi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="225" y="1" width="58" height="20" uuid="c4016db3-ef8c-469d-a93b-5cca52517815"/>
+				<textElement>
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hari}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="293" y="1" width="69" height="20" uuid="ad2e6b6e-7089-4e2d-8b96-e71371b35e7c"/>
+				<textElement>
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jam_mapel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="1" width="76" height="20" uuid="db74525a-9b82-48e2-a45f-dc5965b02a0c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jumlah_jam}]]></textFieldExpression>
+			</textField>
+			<textField pattern="Rp #,##0">
+				<reportElement x="450" y="1" width="77" height="20" uuid="55a8e5ea-2a44-4438-977d-d7dde5b9c1f9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{honor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="527" y="1" width="66" height="20" uuid="2a3b8bb3-7b25-49f5-a7d0-24478cc7641b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="593" y="0" width="113" height="20" uuid="5894fb2d-f307-412b-82a6-4d091c62bc4c"/>
+				<textElement>
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jurusan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="706" y="1" width="96" height="20" uuid="63470d06-3e3d-4b68-8da6-084d72889c2a"/>
+				<textElement>
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tahun_ajaran}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="127" splitType="Stretch">
+			<staticText>
+				<reportElement x="627" y="83" width="113" height="20" uuid="21da4be0-7f0e-4d87-b912-49e31889ed49"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Muksin Haris, SE]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="647" y="10" width="155" height="20" uuid="fb219f5a-f26e-4fd4-96a0-9740f30abb3d"/>
+				<textElement>
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date().format("EEEEE dd MMMMM yyyy")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="614" y="10" width="33" height="20" uuid="7d0b1dca-8b9f-486a-a2ac-b1f16388b6c1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<text><![CDATA[Depok, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="627" y="103" width="113" height="20" uuid="f5ee2681-33da-4e34-833c-766d24ddd2c2"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<text><![CDATA[Kepala Sekolah]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
